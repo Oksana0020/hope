@@ -1,0 +1,18 @@
+<br><br>
+<table border="1">
+    <tr>
+        <th>Service Name</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td><?= $row['ServiceName'] ?></td>
+        <td><?= $row['SDescription'] ?></td>
+        <td>
+            <form action="discontinued.php" method="post">
+                <input type="hidden" name="id" value="<?= $row['ServiceID'] ?>">
+                <button class="blue-button" type="submit" name="delete">Confirm Delete</button>
+            </form>
+        </td>
+    </tr>
+</table>

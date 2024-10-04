@@ -1,0 +1,19 @@
+<head>
+    <title>Hope Medical Center Add Service</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../validateupdatedservice.js"></script>      
+</head>
+
+<body>
+<form name="updateService" action="updated.php" onsubmit="return validateUpdateForm();" method="post">
+    <input type="hidden" name="ud_id" value="<?= $id ?>">
+    <b>Service ID (read only): </b><input type="text" name="ud_id" value="<?= $id ?>" readonly style="background-color: gray;"><br><br>
+    <b>Status (read only): </b><input type="text" name="ud_status" value="<?= $status ?>" readonly style="background-color: gray;"><br><br>
+    <b>Service Name: </b><input type="text" name="ud_name" id="Name" value="<?= $name ?>"><br><br>
+    <b>Description: </b><input type="text" name="ud_description" id="Description" value="<?= $description ?>"><br><br>
+    <b>Rate: </b><input type="text" name="ud_rate" id="Rate" value="<?= $rate ?>"><br><br>
+    <button class="blue-button" type="submit">Update</button>
+</form>
+</body>

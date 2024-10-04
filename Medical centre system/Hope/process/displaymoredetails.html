@@ -1,0 +1,38 @@
+<form action="confirmapp.php" method="post">
+<h2>Patient Details:</h2>
+
+    <label for="PatientID"><b>PatientID:</b></label><br>
+    <input type="text" id="PatientID" name="PatientID" value="<?php echo isset($id) ? $id : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <label for="Forename"><b>Forename:</b></label><br>
+    <input type="text" id="Forename" name="Forename" value="<?php echo isset($forename) ? $forename : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+ 
+    <label for="Surname"><b>Surname:</b></label><br>
+    <input type="text" id="Surname" name="Surname" value="<?php echo isset($surname) ? $surname : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <label for="Address"><b>Address:</b></label><br>
+    <input type="text" id="Address" name="Address" value="<?php echo isset($address) ? $address : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <label for="Phone"><b>Phone:</b></label><br>
+    <input type="text" id="Phone" name="Phone" value="<?php echo isset($phone) ? $phone : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <label for="Email"><b>Email:</b></label><br>
+    <input type="text" id="Email" name="Email" value="<?php echo isset($email) ? $email : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+
+    <h2>Appointment Details:</h2>
+    <label for="AppointmentID"><b>Appointment ID:</b></label><br>
+    <input type="text" id="AppointmentID" name="AppointmentID" value="<?php echo isset($appointmentID) ? $appointmentID : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <label for="ServiceName"><b>Service ID:</b></label><br>
+    <input type="text" id="ServiceID" name="ServiceID" value="<?php echo isset($serviceID) ? $serviceID : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <label for="AppointmentDate"><b>Appointment Date:</b></label><br>
+    <input type="text" id="AppointmentDate" name="AppointmentDate" value="<?php echo isset($appointmentDate) ? $appointmentDate : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <label for="AppointmentTime"><b>Appointment Time:</b></label><br>
+    <input type="text" id="AppointmentTime" name="AppointmentTime" value="<?php echo isset($appointmentTime) ? $appointmentTime : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <button class="blue-button" type="submit" name="update" value="Make Appointment">Make Appointment</button>
+
+</form>

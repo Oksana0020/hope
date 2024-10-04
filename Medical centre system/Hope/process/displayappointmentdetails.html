@@ -1,0 +1,22 @@
+<form action="processpatient.php" method="post">
+    <h2>Appointment Details:</h2>
+    <label for="AppointmentID"><b>Appointment ID:</b></label><br>
+    <input type="text" id="AppointmentID" name="AppointmentID" value="<?php echo isset($appointmentID) ? $appointmentID : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+
+    <label for="ServiceID"><b>Service ID:</b></label><br>
+    <input type="text" id="ServiceID" name="ServiceID" value="<?php echo isset($serviceID) ? $serviceID : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <label for="AppointmentDate"><b>Appointment Date:</b></label><br>
+    <input type="text" id="AppointmentDate" name="AppointmentDate" value="<?php echo isset($appointmentDate) ? $appointmentDate : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+    <label for="AppointmentTime"><b>Appointment Time:</b></label><br>
+    <input type="text" id="AppointmentTime" name="AppointmentTime" value="<?php echo isset($appointmentTime) ? $appointmentTime : ''; ?>"readonly style="background-color: #D3D3D3;"><br><br>
+    
+</form>
+
+<h2>Patient Details:</h2>
+<form name="queryPatient" action="searchPatients.php" onsubmit="return validateForm();" method="post">
+<b>Enter part or full surname:</b><br>
+<input type="text" id="psurname" name="psurname" value=""><br><br>
+<button class="blue-button" type="submit" name="submitdetails">Search Patient</button>
+</form>

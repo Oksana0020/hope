@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hope Medical Center Add Service</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../validation.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="../add/addservice.html">Add Service</a></li>
+                    <li><a href="../amend/selectupdate.php">Amend Service</a></li>
+                    <li><a href="../delete/selectdiscontinue.php">Discontinue Service</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Appointments</a>
+                <ul>
+                    <li><a href="scheduleappointment.php">Schedule Appointment</a></li>
+                    <li><a href="../query/querywhichappointment.php">Query Appointment</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Doctors</a>
+                <ul>
+                    <li><a href="../query/querywhichdoctor.php">Query Doctor</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Patients</a>
+                <ul>
+                    <li><a href="../patients/addpatient.html">Register Patient</a></li>
+                </ul>
+            </ul>
+        </nav>
+    <figure>
+        <img src="../images/image1.jpg" alt="Banner Photo" class="banner-photo">
+        <!-- This picture is taken from free recommended resource https://pixabay.com/photos/mri-magnetic-resonance-imaging-2813904/ -->
+    </figure>
+</header>
+
+<main>
+    <h1>Hope Diagnostic Medical Center</h1>
+    <h2>Schedule new Appointment</h2>
+    <h2>Appointment Details:</h2>
+    <form name="queryAppointment" action="searchPatients.php" onsubmit="return validateForm();" method="post">
+        <b>Appointment ID:</b><br><input type="text" id="AppointmentID" name="AppointmentID" value="<?php echo $nextAppointmentID; ?> "readonly style="background-color: #D3D3D3;"><br><br>
+        <b>Service:</b><br>
+        <select id="ServiceID" name="ServiceID">
+            <?php include '../utilities/populateservices.php'; ?>
+        </select><br><br>
+        <b>Appointment Date:</b><br><input type="date" id="AppointmentDate" name="AppointmentDate"><br><br>
+        <b>Appointment Time:</b><br>
+        <select id="AppointmentTime" name="AppointmentTime">
+            <?php include '../utilities/populatetimeslots.php'; ?>
+        </select><br><br>
+       
+        <button class="blue-button" type="submit" formaction="setappointment.php">Proceed with Registration</button>
+    </form>
+    
+</main>
+
+<footer>
+    <p>&copy; 2024 Hope Medical Center. All Rights Reserved</p>
+</footer>
+</body>
+</html>

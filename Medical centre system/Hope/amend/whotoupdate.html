@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hope Medical Center Discontinue Service</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../validateupdatedservice.js"></script>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="../add/addservice.html">Add Service</a></li>
+                    <li><a href="selectupdate.php">Amend Service</a></li>
+                    <li><a href="../delete/selectdiscontinue.php">Discontinue Service</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Appointments</a>
+                <ul>
+                    <li><a href="../process/scheduleappointment.php">Schedule Appointment</a></li>
+                    <li><a href="../query/querywhichappointment.php">Query Appointment</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Doctors</a>
+                <ul>
+                    <li><a href="../query/querywhichdoctor.php">Query Doctor</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Patients</a>
+                <ul>
+                <li><a href="../patients/addpatient.html">Register Patient</a></li>
+        </ul>
+    </nav>
+    <figure>
+        <img src="../images/image1.jpg" alt="Banner Photo" class="banner-photo">
+        <!-- This picture is taken from free recommended resource https://pixabay.com/photos/mri-magnetic-resonance-imaging-2813904/ -->
+    </figure>
+</header>
+<body>
+    <h1>Hope Diagnostic Medical Center</h1>
+    <form action="updateform.php" method="post">  
+        <br>              
+        <h2>Enter ID of the Service that you would like to amend: </h2><input type="text" name="id" value=""><br>
+        <br>
+        <button class="blue-button" type="submit" name="submitdetails" value="SUBMIT">SUBMIT</button>
+
+    </form>
+</body>
+</html>
